@@ -16,6 +16,8 @@ export class Haiku{
   }
 
   characterChecker(array) {
-    array.includes()
+    if(array.includes(/`1234567809-=~!@#\$%\^&*()_+`/g)=== true) {
+      return false;
+    }
   }
 }

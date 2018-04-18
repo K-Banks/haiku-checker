@@ -10,6 +10,6 @@ describe('Haiku', function() {
   it('should check that all characters used are letters', function () {
     let haikuInput = new Haiku("this is line 1", "this is line 2", "this is line 3");
     let haikuArray = haikuInput.arrayConversion();
-    expect(characterChecker(haikuArray)).toEqual('false');
+    expect(characterChecker(haikuArray)).toEqual(true);
   });
 });
