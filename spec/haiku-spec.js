@@ -15,7 +15,7 @@ describe('Haiku', function() {
   });
 
   it('should verify that lines one and three have five syllables each', function() {
-    let haikuInput = new Haiku("I don't even know where that came from", "this one is correct you know", "this is also a failure");
+    let haikuInput = new Haiku("I don't evean knoow wheerp that came from", "this one is correct you know", "this is also a failure");
     const checker = new Checker();
     haikuInput.arrayConversion();
     expect(checker.syllableChecker(haikuInput)).toEqual(false);
