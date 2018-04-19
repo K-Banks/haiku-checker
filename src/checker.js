@@ -1,8 +1,5 @@
 class Checker {
 
-  constructor(x) {
-    this.x = x;
-  }
 
   characterChecker(object) {
     const arrayToCheck = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
@@ -21,9 +18,25 @@ class Checker {
     return x;
   }
 
-  // syllableChecker(object) {
-  //
-  // }
+  syllableChecker(haiku) {
+    let syllables = [];
+    const vowels = ['a', 'e', 'i', 'o', 'u', 'y'];
+    haiku.array[0].forEach(function(word){
+      for (var i = 0; i < word.length; i++) {
+        vowels.forEach(function(vowel) {
+          if (word[i] === vowel) {
+            let syllable = word.slice(i);
+            syllables.push(syllable);
+            console.log(syllable);
+            console.log(syllables);
+          }
+        });
+      }
+    });
+    if (syllables.length !== 5) {
+      return false;
+    }
+  }
 }
 
 export {Checker};

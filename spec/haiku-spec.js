@@ -9,14 +9,15 @@ describe('Haiku', function() {
   });
 
   it('should check that all characters used are letters', function () {
-    let x = new Checker("x");
     let haikuInput = new Haiku("this is line 1", "this is line 2", "this is line 3");
-    expect(x.characterChecker(haikuInput)).toEqual(false);
+    const checker = new Checker();
+    expect(checker.characterChecker(haikuInput)).toEqual(false);
   });
 
-  // it('should verify that lines one and three have five syllables each', function() {
-  //   let haikuInput = new Haiku("I don't even know where that came from", "this one is correct you know", "this is also a failure");
-  //   haikuInput.arrayConversion();
-  //   expect(syllableChecker(haikuInput)).toEqual(false);
-  // });
+  it('should verify that lines one and three have five syllables each', function() {
+    let haikuInput = new Haiku("I don't even know where that came from", "this one is correct you know", "this is also a failure");
+    const checker = new Checker();
+    haikuInput.arrayConversion();
+    expect(checker.syllableChecker(haikuInput)).toEqual(false);
+  });
 });
